@@ -1,0 +1,51 @@
+{
+  "name": "react-webpack-sass",
+  "version": "1.0.0",
+  "description": "React + Webpack4 + Babel + Sass boilerplate",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --mode development --open",
+    "build": "NODE_ENV='production' webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alankilalank/react-webpack-sass.git"
+  },
+  "keywords": [
+    "React",
+    "Webpack",
+    "Babel",
+    "Sass"
+  ],
+  "author": "alankilalank@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alankilalank/react-webpack-sass/issues"
+  },
+  "homepage": "https://github.com/alankilalank/react-webpack-sass#readme",
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0",
+    "autoprefixer": "^9.3.1",
+    "babel-loader": "^8.0.4",
+    "clean-webpack-plugin": "^0.1.19",
+    "css-loader": "^1.0.1",
+    "file-loader": "^2.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.4.4",
+    "node-sass": "^4.10.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "postcss-loader": "^3.0.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "uglifyjs-webpack-plugin": "^2.0.1",
+    "webpack": "^4.25.0",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10"
+  },
+  "dependencies": {
+    "react": "^16.6.0",
+    "react-dom": "^16.6.0"
+  }
+}

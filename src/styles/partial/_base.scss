@@ -1,0 +1,20 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size:62.5%;
+}
+body {
+  font-family: $font-default;
+  font-weight: 400;
+  line-height: 1.7;
+  box-sizing: border-box;
+  background-color: $color-primary;
+  color: #777777;
+  min-height: 100vh;
+}

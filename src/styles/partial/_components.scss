@@ -1,0 +1,14 @@
+.header {
+  font-size: 1.4rem;
+  height: 7rem;
+  background-color: $color-white;
+  border-bottom: 1px solid #dedede;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  height: 4rem;
+  margin-left: 2rem;
+}
