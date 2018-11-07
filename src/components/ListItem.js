@@ -5,14 +5,78 @@ class ListItem extends Component {
     super(props);
 
     this.state = {
-      complete: true
+      taskList: false,
+      taskListComplete: true
     };
 
-    this.handleRenderComplete = this.handleRenderComplete.bind(this);
+    this.handleRenderTaskList = this.handleRenderTaskList.bind(this);
+    this.handleRenderTaskListComplete = this.handleRenderTaskListComplete.bind(
+      this
+    );
   }
 
-  handleRenderComplete() {
-    if (!this.state.complete) {
+  handleRenderTaskList() {
+    if (!this.state.taskList) {
+      return (
+        <ul className="todo__list--wrapper">
+          <li>
+            <p>There is no task now</p>
+          </li>
+        </ul>
+      );
+    } else {
+      return (
+        <ul className="todo__list--wrapper">
+          <li className="todo__list">
+            <input type="checkbox" id="list-1" />
+            <label htmlFor="list-1">
+              <div className="todo__checkbox" />
+              Home
+            </label>
+            <div className="todo__action">
+              <span>Edit</span> | <span>Delete</span>
+            </div>
+          </li>
+
+          <li className="todo__list">
+            <input type="checkbox" id="list-2" />
+            <label htmlFor="list-2">
+              <div className="todo__checkbox" />
+              Search
+            </label>
+            <div className="todo__action">
+              <span>Edit</span> | <span>Delete</span>
+            </div>
+          </li>
+
+          <li className="todo__list">
+            <input type="checkbox" id="list-3" />
+            <label htmlFor="list-3">
+              <div className="todo__checkbox" />
+              Register
+            </label>
+            <div className="todo__action">
+              <span>Edit</span> | <span>Delete</span>
+            </div>
+          </li>
+
+          <li className="todo__list">
+            <input type="checkbox" id="list-4" />
+            <label htmlFor="list-4">
+              <div className="todo__checkbox" />
+              OTP
+            </label>
+            <div className="todo__action">
+              <span>Edit</span> | <span>Delete</span>
+            </div>
+          </li>
+        </ul>
+      );
+    }
+  }
+
+  handleRenderTaskListComplete() {
+    if (!this.state.taskListComplete) {
       return (
         <ul className="todo__list--wrapper">
           <li>
@@ -63,64 +127,22 @@ class ListItem extends Component {
   render() {
     return (
       <React.Fragment>
-        <ul className="todo__list--wrapper">
-          <li className="todo__list">
-            <input type="checkbox" id="list-1" />
-            <label htmlFor="list-1">
-              <div className="todo__checkbox" />
-              Home
-            </label>
-            <div className="todo__action">
-              <span>Edit</span> | <span>Delete</span>
-            </div>
-          </li>
+        <div className="todo__input-group">
+          <input
+            className="todo__input"
+            type="text"
+            placeholder="Type your todo list here"
+          />
 
-          <li className="todo__list">
-            <input type="checkbox" id="list-2" />
-            <label htmlFor="list-2">
-              <div className="todo__checkbox" />
-              Search
-            </label>
-            <div className="todo__action">
-              <span>Edit</span> | <span>Delete</span>
-            </div>
-          </li>
+          <button className="todo__button">Add Todo List</button>
+        </div>
 
-          <li className="todo__list">
-            <input type="checkbox" id="list-3" />
-            <label htmlFor="list-3">
-              <div className="todo__checkbox" />
-              Register
-            </label>
-            <div className="todo__action">
-              <span>Edit</span> | <span>Delete</span>
-            </div>
-          </li>
-
-          <li className="todo__list">
-            <input type="checkbox" id="list-4" />
-            <label htmlFor="list-4">
-              <div className="todo__checkbox" />
-              OTP
-            </label>
-            <div className="todo__action">
-              <span>Edit</span> | <span>Delete</span>
-            </div>
-          </li>
-
-          <li>
-            <input
-              className="todo__input"
-              type="text"
-              placeholder="Add your todo list here"
-            />
-          </li>
-        </ul>
+        {this.handleRenderTaskList()}
 
         <div className="todo__complete--wrapper">
           <p className="complete__title">Completed</p>
 
-          {this.handleRenderComplete()}
+          {this.handleRenderTaskListComplete()}
         </div>
       </React.Fragment>
     );
