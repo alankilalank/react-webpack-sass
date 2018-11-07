@@ -1,20 +1,24 @@
-import React, { Component } from 'react';
-import Header from './Header';
+import React, { Component } from "react";
+import ListItem from "./ListItem";
 
 class App extends Component {
-  render() { 
+  render() {
     return (
-      <div className="container">
-        <Header />
-        <div className="content">
-          <div className="detail">
-            <h3>React Starter</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+      <div className="section-todo__container">
+        <div className="section-todo">
+          <h1 className="todo__title">TODO LIST</h1>
+          <p className="todo__desc">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid
+            eius maiores saepe, quisquam ullam pariatur!
+          </p>
+
+          <div className="todo__card">
+            <ListItem />
           </div>
         </div>
       </div>
     );
   }
 }
- 
+
 export default App;

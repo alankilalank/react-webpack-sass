@@ -7,14 +7,15 @@
 }
 
 html {
-    font-size:62.5%;
+    font-size: 62.5%;
 }
+
 body {
-  font-family: $font-default;
-  font-weight: 400;
-  line-height: 1.7;
-  box-sizing: border-box;
-  background-color: $color-primary;
-  color: #777777;
-  min-height: 100vh;
+    font-family: $font-default;
+    font-weight: 400;
+    line-height: 1.7;
+    box-sizing: border-box;
+    background-color: $color-white;
+    color: rgba(0, 0, 0, 0.7);
+    min-height: 100vh;
 }
